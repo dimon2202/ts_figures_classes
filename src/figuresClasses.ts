@@ -40,7 +40,7 @@ export class Circle implements Figure {
     public radius: number,
   ) {
     if (this.radius <= 0) {
-      throw new Error('Side lengths must be positive numbers');
+      throw new Error('Radius lengths must be positive numbers');
     }
   }
 
@@ -58,7 +58,7 @@ export class Rectangle implements Figure {
     public b: number,
   ) {
     if (this.a <= 0 || this.b <= 0) {
-      throw new Error('Side lengths must be positive numbers');
+      throw new Error('Width and height lengths must be positive numbers');
     }
   }
 

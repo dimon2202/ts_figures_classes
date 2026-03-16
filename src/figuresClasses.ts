@@ -14,13 +14,13 @@ export class Triangle implements Figure {
     public c: number,
   ) {
     if (this.a <= 0 || this.b <= 0 || this.c <= 0) {
-      throw new Error('Error');
+      throw new Error('Side lengths must be positive numbers');
     }
 
     const sizes: number[] = [this.a, this.b, this.c].sort((x, y) => x - y);
 
     if (sizes[2] >= sizes[1] + sizes[0]) {
-      throw new Error('Error');
+      throw new Error('The provided sides do not form a valid triangle');
     }
   }
 
@@ -40,7 +40,7 @@ export class Circle implements Figure {
     public radius: number,
   ) {
     if (this.radius <= 0) {
-      throw new Error('Error');
+      throw new Error('Side lengths must be positive numbers');
     }
   }
 
@@ -58,7 +58,7 @@ export class Rectangle implements Figure {
     public b: number,
   ) {
     if (this.a <= 0 || this.b <= 0) {
-      throw new Error('Error');
+      throw new Error('Side lengths must be positive numbers');
     }
   }
 
